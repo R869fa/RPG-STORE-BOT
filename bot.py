@@ -4,7 +4,7 @@ from discord.ext import commands
 intents = discord.Intents.default()
 intents.members = True
 
-bot = commands.Bot(command_prefix="!")
+bot = commands.Bot(command_prefix=":")
 @bot.command()
 async def loja(ctx):
     await ctx.send("Bem-vindo à loja! Itens disponíveis:\n1. Espada - 100 moedas\n2. Poção de Cura - 50 moedas")
