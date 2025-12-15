@@ -1,5 +1,5 @@
-import discord # type: ignore
-from discord.ext import commands # type: ignore
+import discord 
+from discord.ext import commands
 import os
 
 intents = discord.Intents.default()
@@ -13,9 +13,9 @@ async def loja(ctx):
 
 @bot.command()
 async def comprar(ctx, item_id: int):
-    if item_id == Sword:
+    if item_id == 1:
         await ctx.send("Você comprou uma Espada!")
-    elif item_id == Pot:
+    elif item_id == 2:
         await ctx.send("Você comprou uma Poção de Cura!")
     else:
         await ctx.send("Item inválido!")
