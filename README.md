@@ -1,1 +1,17 @@
-It's a bot for RPG dynamics, like Buy or sell items and equips, specifically for Discord, still in progess.
+# Discord RPG Store Bot
+
+Discord bot developed in Python with the proposal of simulating an Store for RPG Playing with friends.
+
+## Planned Features
+- Store system (Buy/sell Items)
+- Inventory by User
+- Chat commands
+- Data saving
+
+## Project Status (Experimental Phases)
+The bot was developed in local  host, but it did not respond to the commands in chat even after deploy in Heroku.
+
+## Technology used
+- Python
+- Discord.py
+- Heroku
