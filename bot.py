@@ -1,8 +1,10 @@
-import discord
-from discord.ext import commands
+import discord # type: ignore
+from discord.ext import commands # type: ignore
+import os
 
 intents = discord.Intents.default()
 intents.members = True
+intents.message_content = True
 
 bot = commands.Bot(command_prefix="!", intents=intents)
 @bot.command()
@@ -11,11 +13,23 @@ async def loja(ctx):
 
 @bot.command()
 async def comprar(ctx, item_id: int):
-    if item_id == 1:
+    if item_id == Sword:
         await ctx.send("Você comprou uma Espada!")
-    elif item_id == 2:
+    elif item_id == Pot:
         await ctx.send("Você comprou uma Poção de Cura!")
     else:
         await ctx.send("Item inválido!")
+        
+@bot.event
+async def on_ready():
+    print(f"Conectado como {bot.user}")
 
-bot.run('MTIyNDkyMTExMjkyNDc4NjcwOA.GMRwXK.HaZ-oMczCPfCbJm1LsunsOLX1sOao8FodnCBSc')
+@bot.command()
+async def ping(ctx):
+    await ctx.send("pong")
+
+token = os.getenv('DISCORD_TOKEN')
+if not token:
+    raise RuntimeError("DISCORD_TOKEN não configurado")
+
+bot.run(token)
