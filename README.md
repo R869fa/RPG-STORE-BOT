@@ -15,3 +15,6 @@ The bot was developed in local  host, but it did not respond to the commands in 
 - Python
 - Discord.py
 - Heroku
+- 
+## 12/15 Some Changes and fixes
+Bot operational. Planned support for item images and descriptions soon.
