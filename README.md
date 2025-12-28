@@ -9,7 +9,7 @@ Discord bot developed in Python with the proposal of simulating an Store for RPG
 - Data saving
 
 ## Project Status (Experimental Phases)
-The bot was developed in local  host, but it did not respond to the commands in chat even after deploy in Heroku.
+The bot was developed in local  host
 
 ## Technology used
 - Python
